@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { FaPhone, FaUser } from "react-icons/fa";
+import { FaPhoneAlt, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import NavBar from '../NavBar/NavBar';
 
@@ -75,7 +75,7 @@ const Profile = () => {
         <div>
             <NavBar />
             <br /><br />
-
+            <br /><br />
             <div className="container d-flex justify-content-center">
                 <div className="row g-3">
                     <form>
@@ -90,7 +90,7 @@ const Profile = () => {
                         </div>
                         <div className="input-box">
                             <input type="tel" name="phone" placeholder="Phone" className="form-control" value={isEditing ? editedData.phone || '' : userData.phone || ''} readOnly={!isEditing} onChange={handleInputChange} />
-                            <FaPhone className='icon' />
+                            <FaPhoneAlt className='icon' />
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             {isEditing ? (

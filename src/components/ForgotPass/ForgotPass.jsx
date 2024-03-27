@@ -168,6 +168,7 @@ function ForgotPass() {
             <div className='remember-forgot'>
               <label><input type="checkbox"/>Remember Password</label>
             </div>
+            <br />
             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
               <button type="submit" className="btn btn-danger">Reset Password</button>
             </div>
