@@ -2,24 +2,25 @@
 
 *{
   margin: 0;
-  padding:0 ;
+  padding: 0;
   box-sizing: border-box;
-
+ 
 }
 
 body {
- 
+  
+  
   font-family:'poppins',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* display: flex;
+  /* display:flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; */
-  background-color: black ;  
+  background:rgb(0, 0, 0);
   background-size: cover;
   background-position: center;
-
+  
 
 }
 

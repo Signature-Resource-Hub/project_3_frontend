@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { IoIosMail } from "react-icons/io";
-import { FaLock } from "react-icons/fa";
-import { Link  } from 'react-router-dom';
 import axios from 'axios'; // Import Axios
+import React, { useState } from 'react';
+import { FaLock } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { Link } from 'react-router-dom';
 import "./Login.css";
 
 const Login = () => {
@@ -48,7 +48,7 @@ const Login = () => {
             });
             
             console.log("Login successful:", response.data);
-            window.location.href = '/dashboard';
+            window.location.href = '/profile';
             // return <Link to="/dashboard" />;
 
             setInput({
@@ -66,12 +66,13 @@ const Login = () => {
 
     return (
         <div>
-            <div className="container" style={{ marginTop: "30px" }}>
-                <div className="row justify-content-center">
-                    <div className="wrapper">
-                        <form>
-                            <h1>LOGIN</h1>
-                            <div className="input-box">
+            <br />
+            <br /><br /><br />
+              <div className="container d-flex justify-content-center">
+        <div className="row g-3">
+          <form action=''>
+            <h1>LOGIN</h1>
+            <div className="input-box">
                                 <input
                                     type="email"
                                     name="email"
@@ -96,15 +97,17 @@ const Login = () => {
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <button type="button" className="btn btn-danger" onClick={readValues}>Login</button>
                             </div>
+
                             <div className="register-link">
                                 <p>
-                                    Don't have an account?<Link to="/">Sign up</Link>
+                                    Don't have an account?<Link to="/LoginSignup">Sign up</Link>
                                 </p>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
+          </form>
+        </div>
+      </div>
+
         </div>
     );
 }
