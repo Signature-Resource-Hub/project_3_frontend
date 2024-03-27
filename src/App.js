@@ -1,13 +1,13 @@
 // import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import ForgotPass from './components/ForgotPass/ForgotPass';
-import ProfileUpdate from './components/ProfileUpdate/ProfileUpdate';
-import UpdatePassword from './components/UpdatePassword/UpdatePassword';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Profile from './components/Profile/Profile';
+import HomePage from './components/HomePage/HomePage';
 import Login from './components/Login/Login';
 import LoginSignup from './components/LoginSignup/LoginSignup';
-import HomePage from './components/HomePage/HomePage';
+import Profile from './components/Profile/Profile';
+import ProfileUpdate from './components/ProfileUpdate/ProfileUpdate';
+import UpdatePassword from './components/UpdatePassword/UpdatePassword';
 
 
 function App() {

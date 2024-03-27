@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { IoIosMail } from "react-icons/io";
-import { FaLock } from "react-icons/fa";
-import { Link  } from 'react-router-dom';
 import axios from 'axios'; // Import Axios
+import React, { useState } from 'react';
+import { FaLock } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { Link } from 'react-router-dom';
 import "./Login.css";
 
 const Login = () => {
@@ -83,7 +83,6 @@ const Login = () => {
                                 />
                                 <IoIosMail className="icon" />
                             </div>
-
                             <div className="input-box">
                                 <input
                                     type="password"

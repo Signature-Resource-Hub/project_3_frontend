@@ -1,8 +1,8 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { FaUser, FaPhoneAlt, FaLock } from "react-icons/fa";
+import { FaLock, FaPhoneAlt, FaUser } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 const LoginSignup = () => {
   const [input, setInput] = useState({
