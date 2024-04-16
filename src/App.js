@@ -9,6 +9,13 @@ import Profile from './components/Profile/Profile';
 import ProfileUpdate from './components/ProfileUpdate/ProfileUpdate';
 import UpdatePassword from './components/UpdatePassword/UpdatePassword';
 import News from './components/News/News';
+import AddProperty from './components/AddProperty/AddProperty';
+import Jobs from './components/Jobs/Jobs';
+import AddJob from './components/AddJob/AddJob';
+import Viewproperty from './components/ViewProperty/Viewproperty';
+import ViewRent from './components/ViewProperty/ViewRent';
+import ViewSale from './components/ViewProperty/ViewSale';
+
 
 
 
@@ -28,7 +35,17 @@ function App() {
         <Route path='/updatepass' element={<UpdatePassword/>}/>
         <Route path='/Forgotpass' element={<ForgotPass/>}/>
         
-        <Route path='/News' element={<News/>}/>
+       
+        <Route path='/addprop' element={<AddProperty/>}/>
+        <Route path='/job' element={<Jobs/>}/>
+        <Route path='/addJob' element={<AddJob/>}/>
+        <Route path='/viewprop' element={<Viewproperty/>}/>
+        <Route path='/news'element={<News/>}/>
+        <Route path='/rent'element={<ViewRent/>}/>
+        <Route path='/sale'element={<ViewSale/>}/>
+      
+        
+        
       </Routes>
       </BrowserRouter>
     </div>

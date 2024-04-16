@@ -54,7 +54,7 @@ const UpdatePassword = () => {
   return (
     <div>
       <NavBar />
-      <br />
+      <br /><br /><br /><br />
       <div className="container d-flex justify-content-center">
         <div className="row g-3">
           <form action=''>
