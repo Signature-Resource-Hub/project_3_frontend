@@ -246,8 +246,20 @@ const LoginSignup = () => {
           </div>
         </div>
       </div> */}
-      {successMessage()}
-      {errorMessage()}
+      {/* {successMessage()}
+      {errorMessage()} */}
+
+{success && (
+      <div className="alert alert-success" role="alert">
+        New account was created successfully. Please <Link to="/">Login Here</Link>
+      </div>
+    )}
+
+    {error && (
+      <div className="alert alert-danger" role="alert">
+        {error}
+      </div>
+    )}
     </div>
   );
 };

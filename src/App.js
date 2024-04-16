@@ -8,6 +8,17 @@ import LoginSignup from './components/LoginSignup/LoginSignup';
 import Profile from './components/Profile/Profile';
 import ProfileUpdate from './components/ProfileUpdate/ProfileUpdate';
 import UpdatePassword from './components/UpdatePassword/UpdatePassword';
+import AddProperty from './components/AddProperty/AddProperty';
+import Jobs from './components/Jobs/Jobs';
+import AddJob from './components/AddJob/AddJob';
+import Viewproperty from './components/ViewProperty/Viewproperty';
+import News from './components/News/New';
+import ViewRent from './components/ViewProperty/ViewRent';
+import ViewSale from './components/ViewProperty/ViewSale';
+
+
+
+
 
 
 function App() {
@@ -23,6 +34,16 @@ function App() {
         <Route path='/ProfileUpdate' element={<ProfileUpdate/>} />
         <Route path='/updatepass' element={<UpdatePassword/>}/>
         <Route path='/Forgotpass' element={<ForgotPass/>}/>
+        <Route path='/addprop' element={<AddProperty/>}/>
+        <Route path='/job' element={<Jobs/>}/>
+        <Route path='/addJob' element={<AddJob/>}/>
+        <Route path='/viewprop' element={<Viewproperty/>}/>
+        <Route path='/news'element={<News/>}/>
+        <Route path='/rent'element={<ViewRent/>}/>
+        <Route path='/sale'element={<ViewSale/>}/>
+      
+        
+        
       </Routes>
       </BrowserRouter>
     </div>

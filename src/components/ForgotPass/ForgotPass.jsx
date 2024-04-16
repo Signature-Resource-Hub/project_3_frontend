@@ -97,6 +97,7 @@ import React, { useState } from 'react';
 import { FaLock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import NavBar from '../NavBar/NavBar';
+import { Link } from 'react-router-dom';
 
 function ForgotPass() {
   const [input, setInput] = useState({
@@ -138,7 +139,7 @@ function ForgotPass() {
     <div>
       <NavBar />
       <br />
-      <br /><br />
+      <br /><br /><br /><br />
       <div className="container d-flex justify-content-center">
         <div className="row g-3">
           <form onSubmit={handleFormSubmit}>
@@ -173,7 +174,7 @@ function ForgotPass() {
               <button type="submit" className="btn btn-danger">Reset Password</button>
             </div>
             <div className='register-link'>
-              <p>Don't have an account?<a href='#'>Sign up</a></p>
+              <p>Don't have an account?<Link to='/LoginSignup'>Sign up</Link></p>
             </div>
           </form>
         </div>
