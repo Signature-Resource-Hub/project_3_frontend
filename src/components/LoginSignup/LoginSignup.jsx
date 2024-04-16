@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FaLock, FaPhoneAlt, FaUser } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
+import './LoginSignup.css'
 
 const LoginSignup = () => {
   const [input, setInput] = useState({
@@ -176,78 +177,18 @@ const LoginSignup = () => {
         </div>
       </div>
 
-      {/* <div className="container" style={{ marginTop: "30px" }}>
-        <div className="row justify-content-center">
-          <div className="wrapper">
-            <form>
-              <h1>SIGN UP</h1>
-              <div className="input-box">
-                <input
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={inputHandler("name")}
-                  placeholder="Username"
-                  className="form-control"
-                  autoComplete="name"
-                />
-                <FaUser className="icon" />
-              </div>
-              <div className="input-box">
-                <input
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={inputHandler("email")}
-                  placeholder="email"
-                  className="form-control"
-                  autoComplete="email"
-                />
-                <IoIosMail className="icon" />
-              </div>
-              <div className="input-box">
-                <input
-                  type="tel"
-                  name="phone"
-                  value={phone}
-                  onChange={inputHandler("phone")}
-                  placeholder="phone"
-                  className="form-control"
-                  autoComplete="phone"
-                />
-                <FaPhoneAlt className="icon" />
-              </div>
-              <div className="input-box">
-                <input
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={inputHandler("password")}
-                  placeholder="password"
-                  className="form-control"
-                  autoComplete="password"
-                />
-                <FaLock className="icon" />
-              </div>
-              <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <button
-                  className="btn btn-danger"
-                  onClick={(event) => readValues(event)}
-                >
-                  SIGN UP
-                </button>
-              </div>
-              <div className="register-link">
-                <p>
-                  Already have an account?<Link to="/login">Login</Link>
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div> */}
-      {successMessage()}
-      {errorMessage()}
+    
+      {success && (
+      <div className="alert alert-success" role="alert">
+        New account was created successfully. Please <Link to="/">Login Here</Link>
+      </div>
+    )}
+
+    {error && (
+      <div className="alert alert-danger" role="alert">
+        {error}
+      </div>
+    )}
     </div>
   );
 };

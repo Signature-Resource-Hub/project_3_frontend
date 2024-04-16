@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes,Switch } from 'react-router-dom';
 import './App.css';
 import ForgotPass from './components/ForgotPass/ForgotPass';
 import HomePage from './components/HomePage/HomePage';
@@ -8,6 +8,10 @@ import LoginSignup from './components/LoginSignup/LoginSignup';
 import Profile from './components/Profile/Profile';
 import ProfileUpdate from './components/ProfileUpdate/ProfileUpdate';
 import UpdatePassword from './components/UpdatePassword/UpdatePassword';
+import News from './components/News/News';
+
+
+
 
 
 function App() {
@@ -23,6 +27,8 @@ function App() {
         <Route path='/ProfileUpdate' element={<ProfileUpdate/>} />
         <Route path='/updatepass' element={<UpdatePassword/>}/>
         <Route path='/Forgotpass' element={<ForgotPass/>}/>
+        
+        <Route path='/News' element={<News/>}/>
       </Routes>
       </BrowserRouter>
     </div>
