@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes,Switch } from 'react-router-dom';
 import './App.css';
 import ForgotPass from './components/ForgotPass/ForgotPass';
 import HomePage from './components/HomePage/HomePage';
@@ -8,11 +8,11 @@ import LoginSignup from './components/LoginSignup/LoginSignup';
 import Profile from './components/Profile/Profile';
 import ProfileUpdate from './components/ProfileUpdate/ProfileUpdate';
 import UpdatePassword from './components/UpdatePassword/UpdatePassword';
+import News from './components/News/News';
 import AddProperty from './components/AddProperty/AddProperty';
 import Jobs from './components/Jobs/Jobs';
 import AddJob from './components/AddJob/AddJob';
 import Viewproperty from './components/ViewProperty/Viewproperty';
-import News from './components/News/New';
 import ViewRent from './components/ViewProperty/ViewRent';
 import ViewSale from './components/ViewProperty/ViewSale';
 
@@ -34,6 +34,8 @@ function App() {
         <Route path='/ProfileUpdate' element={<ProfileUpdate/>} />
         <Route path='/updatepass' element={<UpdatePassword/>}/>
         <Route path='/Forgotpass' element={<ForgotPass/>}/>
+        
+       
         <Route path='/addprop' element={<AddProperty/>}/>
         <Route path='/job' element={<Jobs/>}/>
         <Route path='/addJob' element={<AddJob/>}/>

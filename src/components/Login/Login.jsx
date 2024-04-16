@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { FaLock } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Link } from 'react-router-dom';
-import "./Login.css";
+
+import NavBar from '../NavBar/NavBar';
 
 const Login = () => {
     const [input, setInput] = useState({
@@ -66,6 +67,7 @@ const Login = () => {
 
     return (
         <div>
+            <NavBar/>
             <br />
             <br /><br /><br />
               <div className="container d-flex justify-content-center">
