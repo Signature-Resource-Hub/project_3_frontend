@@ -1,0 +1,94 @@
+/* Container for the form and cards */
+.containerJ {
+    padding: 20px;
+}
+
+/* Input box styles */
+.input-boxJ {
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.input-boxJ input[name="Career Summary"] {
+    height: 100px; /* Adjust height as needed */
+}
+
+/* Button styles */
+.btn-danger {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Job card layout */
+.cardsJ {
+    width: 100%;
+    max-width: 300px; /* Maximum width for each card */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    margin: 10px;
+    transition: transform 0.3s; /* For hover effect */
+}
+
+/* Hover effect for job cards */
+.cardsJ:hover {
+    transform: scale(1.05); /* Slightly increase the size of the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add a shadow effect */
+}
+
+/* Card body */
+.card-bodyJ {
+    padding: 10px;
+}
+
+/* Responsive layout for job cards */
+.rowJ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.rowJ.col-12 {
+    padding: 10px;
+}
+
+/* For small screens (e.g., mobile phones) */
+@media (max-width: 576px) {
+    .rowJ .col-12 {
+        flex: 0 0 100%; /* Take up the entire row */
+        max-width: 100%;
+    }
+}
+
+/* For medium screens (e.g., tablets) */
+@media (min-width: 577px) and (max-width: 991px) {
+    .rowJ .col-12 {
+        flex: 0 0 33.333%; /* Take up one-third of the row */
+        max-width: 33.333%;
+    }
+}
+
+/* For large screens (e.g., laptops) and extra-large screens (e.g., desktops) */
+@media (min-width: 992px) {
+    .rowJ .col-12 {
+        flex: 0 0 25%; /* Take up one-fourth of the row */
+        max-width: 25%;
+    }
+}
+
+/* Style for the input box */
+.input-boxJ {
+    /* Increase the width of the input box to fit the container */
+    width: 200%; /* Adjust width to fit the entire screen or container */
+    margin-bottom: 10px;
+}
+
+/* Style for the input element */
+.input-boxJ .form-control {
+    /* Increase the height of the input element */
+    height: 150px; /* Adjust the height as desired */
+    padding: 10px; /* Optional: Add padding for better user experience */
+    resize: vertical; /* Allow vertical resizing */
+    border: none; /* Make the input box border transparent */
+}

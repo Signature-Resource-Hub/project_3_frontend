@@ -1,0 +1,58 @@
+.property-cardsVR {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .property-cardVR {
+    width: 30%; /* Adjust the width as needed */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff; /* Set background color to white */
+  }
+  
+  .property-cardVR img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-contentVR {
+    padding: 20px;
+  }
+
+  .content-containerVR {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the contents horizontally */
+    text-align: center; /* Centers the text content */
+    
+  }
+  
+
+
+/* Styling for the icons */
+.content-containerVR i {
+  color:rgba(193, 14, 14, 0.964); /* Set the icon color to red */
+  margin-right: 5px; /* Add space between the icon and the text */
+}
+
+/* Styling for the text */
+.content-containerVR h5, .content-containerVR p {
+  color: black; /* Set the text color to black */
+}
+
+/* Styling for the button */
+.content-containerVR .btn {
+  background-color: rgba(241, 232, 232, 0.964);; /* Set the button background color to white */
+  color: black; /* Set the button text color to black */
+}
+
+/* Hover effect for the button */
+.content-containerVR .btn:hover {
+  background-color:rgba(193, 14, 14, 0.964); /* Change the button background color to red on hover */
+ 
+}
+

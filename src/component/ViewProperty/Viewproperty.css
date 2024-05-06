@@ -1,0 +1,105 @@
+.cardsVP {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .containerVP {
+    width: auto;
+  }
+  
+  .cardVP {
+    width: 200px; /* Set a fixed width for all cards */
+    height: 300px; /* Set a fixed height for all cards */
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 576px) {
+    .cardVP {
+      width: 250px;
+      height: 350px; /* Adjust height for small devices and above */
+    }
+  }
+  
+  /* Ensuring all cards have the same dimensions */
+  .card-img-top {
+    width: 100%;
+    height: 50%; /* Adjust the height of the image within the card */
+    object-fit: cover; /* Ensure the image covers the entire space of the card */
+  }
+  
+  .card-contentVP {
+    height: 50%; /* Adjust the height of the content within the card */
+    overflow: hidden; /* Hide any overflow content */
+  }
+  
+/* .row{
+    width: 300px;
+    border: none;
+   }  */
+
+   /* Existing CSS */
+.cardsVP {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.containerVP {
+  width: auto;
+}
+
+.cardVP {
+ 
+ 
+  transition: transform 0.3s ease; /* Optional: Smooth transition for hover effect */
+}
+
+@media (min-width: 576px) {
+  .cardVP {
+      width: 250px;
+      height: 350px; /* Adjust height for small devices and above */
+  }
+}
+
+/* Ensuring all cards have the same dimensions */
+.card-img-top {
+  width: 100%;
+  height: 50%; /* Adjust the height of the image within the card */
+  object-fit: cover; /* Ensure the image covers the entire space of the card */
+}
+
+.card-contentVP {
+  height: 50%; /* Adjust the height of the content within the card */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+/* Optional: Add a hover effect to the cards */
+.cardVP:hover {
+  transform: translateY(-5px); /* Lift the card slightly on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); /* Increase the shadow effect on hover */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the contents horizontally */
+  text-align: center; /* Centers the text content */
+}
+
+/* Change the color of the icons */
+.card-bodyVP i {
+  color: rgba(193, 14, 14, 0.964); /* Choose the color you want */
+}
+
+/* Change the button color */
+.card-bodyVP .btn {
+  background-color: rgba(241, 232, 232, 0.964); /* Choose the background color you want */
+  color: rgb(15, 14, 14); /* Choose the text color you want */
+}
+
+.card-bodyVP .btn:hover {
+  background-color:rgba(193, 14, 14, 0.964); /* Choose the background color you want */
+
+}
+
