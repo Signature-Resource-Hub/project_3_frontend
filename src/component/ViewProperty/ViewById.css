@@ -1,0 +1,54 @@
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Set the height to full viewport height */
+}
+
+.icon-color {
+    color: rgba(193, 14, 14, 0.964); /* Change the color of the icon to red */
+}
+
+/* In ViewById.css */
+
+/* Container for the property image and details */
+.property-container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    margin-top: 20px;
+}
+
+/* Left column for property image */
+.property-image {
+    flex: 1; /* Take up 50% of the container width */
+    max-width: 50%; /* Limit the maximum width */
+}
+
+/* Right column for property details */
+.property-details {
+    flex: 1; /* Take up 50% of the container width */
+    max-width: 50%; /* Limit the maximum width */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+/* Icon color */
+.icon-color {
+    color:  rgba(193, 14, 14, 0.964); /* Change the icon color to red */
+}
+
+.whatsapp-chat-button {
+    color: rgb(41, 239, 41);
+    border: rgba(255, 255, 255, 0.441);
+    
+}
+
+.icon-colorW {
+    color:  rgb(41, 239, 41);
+}
+
+.whatsapp-chat-button:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); /* Increase the shadow effect on hover */
+  }

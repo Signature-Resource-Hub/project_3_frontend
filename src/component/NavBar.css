@@ -1,0 +1,57 @@
+/* Navbar styling */
+.navbar {
+    background-color: #81663a; /* Change the background color here */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for navbar */
+  }
+  
+  /* Navbar links styling */
+  .navbar .nav-link {
+    color: rgb(22, 21, 21); /* Set the link color */
+    margin-right: 10px; /* Add some space between links */
+  }
+  
+  /* Active link styling */
+  .navbar .nav-link.active {
+    color: #070707; /* Set the color for the active link */
+  }
+  
+  /* Hover effect for links */
+  .navbar .nav-link:hover {
+    color: rgba(193, 14, 14, 0.964); /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .navbar .icon:hover {
+    color: rgba(193, 14, 14, 0.964); /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Dropdown menu styling */
+  .navbar .dropdown-menu {
+    background-color: #d4d6dd; /* Change the background color here */
+    border: none; /* Remove border */
+  }
+  
+  /* Dropdown menu item styling */
+  .navbar .dropdown-item {
+    color: white; /* Set the color for dropdown items */
+  }
+  
+  /* Hover effect for dropdown menu items */
+  .navbar .dropdown-item:hover {
+    background-color: rgba(193, 14, 14, 0.964); /* Change background color on hover */
+    color: rgb(15, 14, 14); /* Keep text color white on hover */
+  }
+  
+  /* Make the navbar fixed to the top */
+  .navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%; /* Ensure it spans the entire width */
+    z-index: 1030; /* Keep it on top of other elements */
+  }
+  
+  .navbar-brand {
+    color:rgba(193, 14, 14, 0.964); /* Change the text color to red */
+}
+

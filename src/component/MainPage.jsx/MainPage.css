@@ -1,0 +1,63 @@
+.d-flex {
+    display: flex;
+}
+
+.image-container {
+    width: 40%; /* Adjust this value to decrease image size */
+}
+
+.image {
+    width: 50%; /* Full width of the image container */
+    height: 50%;
+}
+
+.text-container {
+    flex: 1; /* Take the remaining space */
+    padding-left: 20px; /* Add padding to separate image and text */
+}
+
+.text {
+    font-size: 1.5rem; /* Adjust text size if necessary */
+}
+
+/* CSS code */
+.login-link-container {
+    display: flex;
+    justify-content: right; /* Aligns the link to the right */
+}
+
+.login-link {
+    /* Optionally, you can add more styles to the login link */
+    padding: 0.5rem 1rem; /* Adjust padding as desired */
+    border-radius: 5px; /* Add border-radius for a rounded appearance */
+    background-color: #d12121; /* Bootstrap primary color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* CSS styles */
+.content-container .row {
+    margin: 0;
+}
+
+.content-container .col-12 {
+    display: flex;
+    justify-content: space-between; /* Ensures the brand and login link are spaced apart */
+    align-items: center; /* Vertically centers the elements */
+}
+
+
+
+.login-link-container {
+    /* Adds left margin to create space between Unify brand and login link */
+    margin-left: auto; /* Moves the login link container to the far right */
+}
+
+.login-link {
+    padding: rem 1rem; 
+    margin-right: 800%;/* Optional: add padding to the login link */
+    border-radius: 5px; /* Optional: rounded corners for the link */
+    background-color: #ae0c17; /* Bootstrap primary color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+}
