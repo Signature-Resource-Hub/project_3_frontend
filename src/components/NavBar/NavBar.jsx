@@ -17,7 +17,16 @@ const NavBar = () => {
           <li className="nav-item"><Link className="nav-link active text-black" to=""> <span className="sr-only"></span></Link></li>
             <li className="nav-item"><Link className="nav-link active text-black" to="/home">Home <span className="sr-only"></span></Link></li>
            
-              <li className="nav-item"><Link className="nav-link active text-black" to="/job">Job <span className="sr-only"></span></Link></li>
+            <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle text-black" href="" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown1">Jobs</a>
+                <div className="dropdown-menu" aria-labelledby="dropdown1">
+                  <Link className="dropdown-item text-black" to="/recommend">Search By title</Link>
+                  <Link className="dropdown-item text-black" to="/job">Search By Career Summary</Link>
+                
+                </div>
+              </li>
+
+
 
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle text-black" href="" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown1">Property</a>
@@ -36,7 +45,8 @@ const NavBar = () => {
                 <a className="nav-link dropdown-toggle text-black" href="" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown1">Service</a>
                 <div className="dropdown-menu" aria-labelledby="dropdown1">
               
-                  <Link className="dropdown-item text-black" to="">Baby sitting</Link>
+                <Link className="dropdown-item text-black" to="/viewservices">All</Link>
+                  <Link className="dropdown-item text-black" to="">Nursing</Link>
                   <Link className="dropdown-item text-black" to="">Household</Link>
                   <Link className="dropdown-item text-black" to="">Automobiles</Link>
                   <Link className="dropdown-item text-black" to="">Travel Guide</Link>
@@ -61,7 +71,7 @@ const NavBar = () => {
                 <a className="nav-link dropdown-toggle text-black" href="" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown1">Add</a>
                 <div className="dropdown-menu" aria-labelledby="dropdown1">
                   <Link className="dropdown-item text-black" to="/addprop">Property</Link>
-                  <Link className="dropdown-item text-black" to="/updatepass">Service</Link>
+                  <Link className="dropdown-item text-black" to="/addServices">Service</Link>
                   <Link className="dropdown-item text-black" to="/addJob">Job</Link>
                   
                 </div>

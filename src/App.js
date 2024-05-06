@@ -15,6 +15,9 @@ import AddJob from './components/AddJob/AddJob';
 import Viewproperty from './components/ViewProperty/Viewproperty';
 import ViewRent from './components/ViewProperty/ViewRent';
 import ViewSale from './components/ViewProperty/ViewSale';
+import AddServiceForm from './components/AddServices/AddServices';
+import Recommend from './components/Jobs/Recommend';
+import ViewServices from './components/AddServices/ViewServices';
 
 
 
@@ -35,10 +38,13 @@ function App() {
         <Route path='/updatepass' element={<UpdatePassword/>}/>
         <Route path='/Forgotpass' element={<ForgotPass/>}/>
         
-       
         <Route path='/addprop' element={<AddProperty/>}/>
         <Route path='/job' element={<Jobs/>}/>
+        <Route path='/recommend' element={<Recommend/>}/>
         <Route path='/addJob' element={<AddJob/>}/>
+        <Route path='/addServices' element={<AddServiceForm/>}/>
+        <Route path='/viewservices' element={<ViewServices/>}/>
+
         <Route path='/viewprop' element={<Viewproperty/>}/>
         <Route path='/news'element={<News/>}/>
         <Route path='/rent'element={<ViewRent/>}/>

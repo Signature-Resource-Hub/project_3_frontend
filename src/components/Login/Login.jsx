@@ -1,8 +1,9 @@
-import axios from 'axios'; // Import Axios
+import axios from 'axios';
 import React, { useState } from 'react';
 import { FaLock } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
 
 import NavBar from '../NavBar/NavBar';
 
@@ -49,8 +50,23 @@ const Login = () => {
             });
             
             console.log("Login successful:", response.data);
-            window.location.href = '/profile';
-            // return <Link to="/dashboard" />;
+            console.log(response.data.token)
+            const token = response.data.token
+            if (token) {
+                const decodedToken = jwtDecode(token);
+                console.log(decodedToken.id)
+                localStorage.setItem('userId', decodedToken.id);
+                localStorage.setItem('user_type', decodedToken.user_type);
+                const user_type = localStorage.getItem('user_type');
+                if (user_type === 'user') {
+                    window.location.href = '/Profile';
+                } else if (user_type === 'admin') {
+                    // Redirect to job adding page for admin
+                    window.location.href = '/addJob';
+                } else {
+                    alert("Not a Valid User")
+                }
+            }
 
             setInput({
                 email: "",
@@ -67,48 +83,48 @@ const Login = () => {
 
     return (
         <div>
-            <NavBar/>
             <br />
-            <br /><br /><br />
-              <div className="container d-flex justify-content-center">
-        <div className="row g-3">
-          <form action=''>
-            <h1>LOGIN</h1>
-            <div className="input-box">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={email}
-                                    onChange={inputHandler('email')}
-                                    placeholder="Email"
-                                    className="form-control"
-                                />
-                                <IoIosMail className="icon" />
-                            </div>
-                            <div className="input-box">
-                                <input
-                                    type="password"
-                                    name="password"
-                                    value={password}
-                                    onChange={inputHandler('password')}
-                                    placeholder="Password"
-                                    className="form-control"
-                                />
-                                <FaLock className="icon" />
-                            </div>
-                            <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                <button type="button" className="btn btn-danger" onClick={readValues}>Login</button>
-                            </div>
+            <br />
+            <br />
+            <div className="container d-flex justify-content-center">
+                <div className="row g-3">
+                    <form action=''>
+                        <h1>LOGIN</h1>
+                        <div className="input-box">
+                            <input
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={inputHandler('email')}
+                                placeholder="Email"
+                                className="form-control"
+                            />
+                            <IoIosMail className="icon" />
+                        </div>
+                        <div className="input-box">
+                            <input
+                                type="password"
+                                name="password"
+                                value={password}
+                                onChange={inputHandler('password')}
+                                placeholder="Password"
+                                className="form-control"
+                            />
+                            <FaLock className="icon" />
+                        </div>
+                        <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <button type="button" className="btn btn-danger" onClick={readValues}>Login</button>
+                        </div>
 
-                            <div className="register-link">
-                                <p>
-                                    Don't have an account?<Link to="/LoginSignup">Sign up</Link>
-                                </p>
-                            </div>
-            
-          </form>
-        </div>
-      </div>
+                        <div className="register-link">
+                            <p>
+                                Don't have an account?<Link to="/LoginSignup">Sign up</Link>
+                            </p>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
 
         </div>
     );
