@@ -114,7 +114,7 @@ const ViewAllJob = () => {
                             <li onClick={() => handleMenuOptionClick('/jobs')}>
                                 Search by Career Summary
                             </li>
-                            <li onClick={() => handleMenuOptionClick('/search-resume')}>
+                            <li onClick={() => handleMenuOptionClick('/recommend')}>
                                 Search by Resume
                             </li>
                         </ul>

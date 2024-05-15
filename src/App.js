@@ -20,14 +20,18 @@ import ViewIdJob from './component/ViewAllJob/ViewIdJob';
 import ContactUs from './component/ContactUs/ContactUs';
 import About from './component/About/About';
 import Mainpage from './component/MainPage.jsx/Mainpage';
-
-
-
+import ViewServices from './component/AddServices/ViewServices';
+import AddServices from './component/AddServices/AddServices';
+import ViewHousehold from './component/AddServices/ViewHousehold';
+import ViewAuto from './component/AddServices/ViewAuto';
+import ViewNurse from './component/AddServices/ViewNurse';
+import ViewPet from './component/AddServices/ViewPet';
+import ViewTravel from './component/AddServices/ViewTravel';
+import ViewLegal from './component/AddServices/ViewLegal';
 
 function App() {
   return (
     <div>
-      
       <BrowserRouter>
       <Routes>
         <Route path='/main' element={<Mainpage/>}/>
@@ -42,18 +46,24 @@ function App() {
         <Route path='/updatepass' element={<UpdatePassword/>}/>
         <Route path='/Forgotpass' element={<ForgotPass/>}/>
         <Route path='/addprop' element={<AddProperty/>}/>
+        <Route path='/addservices' element={<AddServices/>}/>
         <Route path='/addJob' element={<AddJob/>}/>
+        <Route path='/viewservices' element={<ViewServices/>}/>
+        <Route path='/house' element={<ViewHousehold/>}/>
+        <Route path='/auto' element={<ViewAuto/>}/>
+        <Route path='/nurse' element={<ViewNurse/>}/>
+        <Route path='/pet' element={<ViewPet/>}/>
+        <Route path='/travel' element={<ViewTravel/>}/>
+        <Route path='/legal' element={<ViewLegal/>}/>
         <Route path='/viewallj' element={<ViewAllJob/>}/>
         <Route path='/jobs' element={<Jobs/>}/>
         <Route path='/LoginSignup' element={<LoginSignup/>}/>
         <Route path='/ViewjobbyId' element={<ViewIdJob/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/about' element={<About/>}/>
-
       </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;

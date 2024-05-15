@@ -213,6 +213,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+// import NavBAr from '../NavBAr';
 import NavBAr from '../NavBAr';
 import Compress from 'compress.js';
 import './AddProperty.css';

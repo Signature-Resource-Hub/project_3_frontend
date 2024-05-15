@@ -8,7 +8,7 @@ const NavBAr = () => {
     <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary  fixed-top">
   <div class="container-fluid ">
-    <a class="navbar-brand" href="/home"><b>Unify.</b></a>
+    <a class="navbar-brand" href="/home"><b>OSH</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,10 +17,20 @@ const NavBAr = () => {
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/viewallj">Job</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/main">Services</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/viewservices">View all</a></li>
+            <li><a class="dropdown-item" href="/house">Household Services</a></li>
+            <li><a class="dropdown-item" href="/auto">Auto Services</a></li>
+            <li><a class="dropdown-item" href="/nurse">Nursing</a></li>
+            <li><a class="dropdown-item" href="/pet">Pet Services</a></li>
+            <li><a class="dropdown-item" href="/travel">Travel Guide</a></li>
+            <li><a class="dropdown-item" href="/legal">Legal Services</a></li>
+          </ul>
         </li>
-        
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,8 +55,9 @@ const NavBAr = () => {
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/addJob">Job</a></li>
-            <li><a class="dropdown-item" href="">Services</a></li>
+            
             <li><a class="dropdown-item" href="/addprop">Property</a></li>
+            <li><a class="dropdown-item" href="/addservices">Services</a></li>
           </ul>
         </li>
         <li className="nav-item dropdown">
