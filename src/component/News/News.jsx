@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBAr from '../NavBAr';
@@ -7,7 +9,7 @@ import './News.css'
 
 const News = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [ setLoading] = useState(true);
 
   const getData = () => {
     axios
@@ -45,20 +47,20 @@ const News = () => {
       </div>
       <br />
       <br />
-      <div className="containerN">
-        {/* <div className="row"> 
+      <div className="container">
+        {/* <div className="row"> */}
            {/* <div className="">  */}
             
-            <div className="cardN h-100">
+            <div className="cards h-100">
               {
               data.map(
                 (value, index) => {
                
-                return  <div className="cardN h-100">
+                return  <div className="card h-100">
                     <img src={value.urlToImage} className="card-img-top" alt="..." />
-                    <div className="cardN-body">
-                      <h5 className="cardN-title">{value.title}</h5>
-                      <p className="cardN-text">{value.description}</p>
+                    <div className="card-body">
+                      <h5 className="card-title">{value.title}</h5>
+                      <p className="card-text">{value.description}</p>
                       <a href={value.url} className="btn btn-primary">Read</a>
                     </div>
                   </div>

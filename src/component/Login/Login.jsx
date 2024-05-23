@@ -60,7 +60,7 @@ const Login = () => {
                 localStorage.setItem('user_type', decodedToken.user_type);
                 const user_type = localStorage.getItem('user_type');
                 if (user_type === 'user') {
-                    window.location.href = '/home';
+                    window.location.href = '/Firstpage';
                 } else if (user_type === 'admin') {
                     // Redirect to job adding page for admin
                     window.location.href = '/addJob';

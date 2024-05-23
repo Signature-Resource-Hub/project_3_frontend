@@ -20,6 +20,7 @@ import ViewIdJob from './component/ViewAllJob/ViewIdJob';
 import ContactUs from './component/ContactUs/ContactUs';
 import About from './component/About/About';
 import Mainpage from './component/MainPage.jsx/Mainpage';
+import FirstPage from './component/FirstPage/FirstPage';
 
 
 
@@ -30,9 +31,9 @@ function App() {
       
       <BrowserRouter>
       <Routes>
-        <Route path='/main' element={<Mainpage/>}/>
+        <Route path='/' element={<Mainpage/>}/>
         <Route path='/home' element={<HomePage/>}/>
-        <Route path='/' element={<Login/>} />
+        <Route path='/login' element={<Login/>} />
         <Route path='/News' element={<News/>}/>
         <Route path='/Viewproperty' element={<Viewproperty/>}/>
         <Route path='/viewbyid' element={<ViewById/>}/>
@@ -49,6 +50,7 @@ function App() {
         <Route path='/ViewjobbyId' element={<ViewIdJob/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/Firstpage' element={<FirstPage/>}/>
 
       </Routes>
       </BrowserRouter>
