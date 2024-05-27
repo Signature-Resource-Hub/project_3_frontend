@@ -67,11 +67,24 @@ const ViewRent = () => {
                                 {/* <p className="card-textVR">
                                     <i className="fas fa-bath"></i> {property.bhk}
                                 </p> */}
-                                <p className="card-textVR">
+                                {/* <p className="card-textVR">
                                     <i className="fas fa-map-marker-alt"></i> {property.location}
                                 </p>
                                 <p className="card-textVR">
                                     <i className="fas fa-home"></i> {property.property_type}
+                                </p> */}
+
+                                <p className="card-textVP">
+                                    {property.bhk}
+                                </p>
+
+                                <p className="card-textVP">
+                                    {property.location}
+                                </p>
+                                
+                                <p className="card-textVP">
+                                    {/* <i className="fas fa-home"></i>  */}
+                                    {property.property_type}
                                 </p>
                                
                                 <button className="btn btn-primary" onClick={() => handleViewRent(property._id)}>View</button>

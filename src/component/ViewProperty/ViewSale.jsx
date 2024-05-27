@@ -67,11 +67,24 @@ const ViewSale = () => {
                                 {/* <h5 className="card-titleVS">
                                     <i className="fas fa-bath"></i> {property.bhk}
                                 </h5> */}
-                                <p className="card-textVS">
+                                {/* <p className="card-textVS">
                                     <i className="fas fa-map-marker-alt"></i> {property.location}
                                 </p>
                                 <p className="card-textVS">
                                     <i className="fas fa-home"></i> {property.property_type}
+                                </p> */}
+
+                                <p className="card-textVP">
+                                    {property.bhk}
+                                </p>
+
+                                <p className="card-textVP">
+                                    {property.location}
+                                </p>
+                                
+                                <p className="card-textVP">
+                                    {/* <i className="fas fa-home"></i>  */}
+                                    {property.property_type}
                                 </p>
                                 <button className="btn btn-primary" onClick={() => handleViewRent(property._id)}>View</button>
                             </div>

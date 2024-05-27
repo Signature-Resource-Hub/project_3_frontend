@@ -79,10 +79,16 @@ const Viewproperty = () => {
                                     <i className="fas fa-bath"></i> {property.bhk}
                                 </h5> */}
                                 <p className="card-textVP">
-                                    <i className="fas fa-map-marker-alt"></i> {property.location}
+                                    {property.bhk}
                                 </p>
+
                                 <p className="card-textVP">
-                                    <i className="fas fa-home"></i> {property.property_type}
+                                    {property.location}
+                                </p>
+                                
+                                <p className="card-textVP">
+                                    {/* <i className="fas fa-home"></i>  */}
+                                    {property.property_type}
                                 </p>
                                 <button onClick={() => handleViewProperty(property._id)} className="btn btn-primary">View</button>
                             </div>

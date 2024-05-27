@@ -58,17 +58,15 @@ const ViewIdJob = () => {
     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
       <div className="row g-3">
         <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-          <a href="/contactus"> <h4 style={{ textAlign: 'center' }}>Contact Us</h4></a>
-          <p>43 Raymouth Rd. tornoto, Canada 3910</p>
-          <p>+1(123)-456-7890</p>
-          <p>+1(123)-456-7890</p>
-          <p>info@mydomain.com</p>
+          <a href="/home"> <h4 style={{ textAlign: 'center' }}>Home</h4></a>
+          <a href="/Viewproperty"> <h4 style={{ textAlign: 'center' }}>Properties</h4></a>
+          <a href="/contactus"> <h4 style={{ textAlign: 'center' }}>Services</h4></a>
+          <a href="/viewallj"> <h4 style={{ textAlign: 'center' }}>Jobs</h4></a>
+          <a href="/News"> <h4 style={{ textAlign: 'center' }}>News</h4></a>
         </div>
         <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+        <a href="/contactus"> <h4 style={{ textAlign: 'center' }}>Contact Us</h4></a>
         <a href="/about"> <h4 style={{ textAlign: 'center' }}>About</h4></a>
-          <p>About us</p>
-          <p>Mission</p>
-          <p>Vission</p>
           <p>Terms</p>
           <p>Privacy</p>
         </div>
