@@ -1,4 +1,4 @@
-import axios from 'axios'; // Import Axios
+import axios from 'axios';
 import React, { useState } from 'react';
 import { FaLock } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
