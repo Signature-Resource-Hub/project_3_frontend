@@ -28,6 +28,7 @@ import ViewNurse from './component/AddServices/ViewNurse';
 import ViewPet from './component/AddServices/ViewPet';
 import ViewTravel from './component/AddServices/ViewTravel';
 import ViewLegal from './component/AddServices/ViewLegal';
+import Verify from './component/LoginSignup/Verify';
 
 function App() {
   return (
@@ -58,6 +59,8 @@ function App() {
         <Route path='/viewallj' element={<ViewAllJob/>}/>
         <Route path='/jobs' element={<Jobs/>}/>
         <Route path='/LoginSignup' element={<LoginSignup/>}/>
+        <Route path='/verify' element={<Verify/>}/>
+        
         <Route path='/ViewjobbyId' element={<ViewIdJob/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/about' element={<About/>}/>
