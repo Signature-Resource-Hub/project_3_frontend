@@ -29,6 +29,8 @@ import ViewPet from './component/AddServices/ViewPet';
 import ViewTravel from './component/AddServices/ViewTravel';
 import ViewLegal from './component/AddServices/ViewLegal';
 import Verify from './component/LoginSignup/Verify';
+import PasswordSetup from './component/LoginSignup/Password';
+import Password from './component/LoginSignup/Password';
 
 function App() {
   return (
@@ -60,7 +62,7 @@ function App() {
         <Route path='/jobs' element={<Jobs/>}/>
         <Route path='/LoginSignup' element={<LoginSignup/>}/>
         <Route path='/verify' element={<Verify/>}/>
-        
+        <Route path='/password' element={<Password/>}/>
         <Route path='/ViewjobbyId' element={<ViewIdJob/>}/>
         <Route path='/contactus' element={<ContactUs/>}/>
         <Route path='/about' element={<About/>}/>

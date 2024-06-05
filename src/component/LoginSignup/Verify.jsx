@@ -1,6 +1,7 @@
+// Verify.jsx
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Verify.css';
 
 const Verify = () => {
@@ -24,16 +25,10 @@ const Verify = () => {
 
   const handleVerify = async () => {
     const enteredOtp = otp.join('');
-    try {
-      const response = await axios.post("http://localhost:8000/api/verify-otp-and-register", { otp: enteredOtp, userData });
-      if (response.data.status === 'success') {
-        navigate('/'); // Navigate to the next page after successful verification and registration
-      } else {
-        alert(response.data.msg);
-      }
-    } catch (error) {
-      console.error('Verification error:', error.response ? error.response.data : error);
-      alert('An error occurred during verification. Please try again.');
+    if (enteredOtp === "1234") { // Assuming 1234 is the correct OTP for testing purposes
+      navigate('/password', { state: { userData } });
+    } else {
+      alert('Invalid OTP. Please try again.');
     }
   };
 
