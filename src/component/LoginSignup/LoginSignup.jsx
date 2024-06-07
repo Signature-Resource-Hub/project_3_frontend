@@ -1,10 +1,11 @@
-// LoginSignup.jsx
 import React, { useState } from 'react';
 import { FaPhoneAlt, FaUser } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 import { Link, useNavigate } from 'react-router-dom';
 import './LoginSignup.css';
 import axios from 'axios';
+
+
 
 const LoginSignup = () => {
   const [input, setInput] = useState({
@@ -18,7 +19,7 @@ const LoginSignup = () => {
     setInput({ ...input, [name]: event.target.value });
   };
 
-  const readValues = async (event) => {
+  const readValues = (event) => {
     event.preventDefault();
 
     const { name, email, phone } = input;
@@ -41,15 +42,26 @@ const LoginSignup = () => {
     console.log('Request payload:', payload);
 
     try {
-      const response = await axios.post("http://localhost:8000/api/register", payload);
-      if (response.data.status === "pending") {
+      // Store data locally instead of sending it to the backend
+      localStorage.setItem("userData", JSON.stringify(payload));
+      
+      // Mock the response data
+      const response = {
+        data: {
+          status: "approved",
+          userData: payload
+        }
+      };
+
+      if (response.data.status === "approved") {
+        
         navigate("/verify", { state: { userData: response.data.userData } });
       } else {
         alert(response.data.msg);
       }
     } catch (error) {
       alert("Something went wrong. Please try again later.");
-      console.error('Error occurred:', error.response?.data);
+      console.error('Error occurred:', error);
     }
   };
 
@@ -60,11 +72,11 @@ const LoginSignup = () => {
           <form>
             <h1>SIGN-UP</h1>
             <div className="input-boxLS">
-              <input
-                type="text"
+            <input
+                type="name"
                 value={input.name}
                 onChange={inputHandler("name")}
-                placeholder="User Name"
+                placeholder="User name"
                 className="form-control"
               />
               <FaUser className="iconLS" />
