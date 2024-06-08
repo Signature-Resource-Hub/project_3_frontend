@@ -14,14 +14,14 @@
     }
 }
 
-/* For medium screens (md) - display three cards per row */
+/* For medium screens (md) - display two cards per row */
 @media (min-width: 577px) and (max-width: 991px) {
     .jobs-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* For large screens (lg), extra-large screens (xl), and extra-extra-large screens (xxl) - display four cards per row */
+/* For large screens (lg) and extra-large screens (xl) - display four cards per row */
 @media (min-width: 992px) {
     .jobs-container {
         grid-template-columns: repeat(4, 1fr);
@@ -32,7 +32,7 @@
 .job-card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 16px;
+    padding: 20px; /* Increase padding for larger cards */
     background-color: #f9f9f9;
     transition: transform 0.3s;
 }
@@ -44,7 +44,7 @@
 
 /* Style for the job info section */
 .job-info {
-    margin-bottom: 8px;
+    margin-bottom: 16px; /* Add some margin at the bottom */
 }
 
 /* Style for the button */
@@ -52,28 +52,31 @@
     display: block;
     width: 100%;
     text-align: center;
-    padding: 8px;
-   
-    background-color:  #eee6e6;
+    padding: 12px; /* Increase padding for larger button */
+    background-color: #eee6e6;
     color: #010101;
     border: none;
 }
 
 .btn:hover {
-   
     background-color: #b92727;
-    color: #151414;
+    color: #ffffff;
     border: none;
 }
-/* Hamburger menu container */
+
 .hamburger-menu {
     cursor: pointer;
-    padding: 10px;
+    padding: 40px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
+
 
 /* Hamburger icon */
 .hamburger-icon {
     font-size: 24px;
+    
 }
 
 /* Dropdown menu */
@@ -112,3 +115,15 @@
     background-color: #f0f0f0;
 }
 
+/* Job details icons */
+.job-info p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.job-info p svg {
+    margin-right: 8px;
+    color: #b92727; /* Red color for icons */
+}
