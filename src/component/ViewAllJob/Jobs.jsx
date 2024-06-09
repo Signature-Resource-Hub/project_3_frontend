@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Jobs.css';
 import NavBAr from '../NavBAr';
+import { FaBuilding, FaDollarSign, FaCalendarAlt, FaUser } from 'react-icons/fa'; // Import icons
 
 const Jobs = () => {
     const [predictedCategory, setPredictedCategory] = useState('');
@@ -96,9 +97,10 @@ const Jobs = () => {
                                     <div className="cardsJ">
                                         <div className="card-bodyJ">
                                             <h5 className="card-title">{job.title}</h5>
-                                            <p className="card-text">{job.description}</p>
-                                            <p className="card-text">Salary: {job.expected_salary}</p>
-                                            <p className="card-text">{job.email}</p>
+                                            <p><FaBuilding />  {job.company_id}</p>
+                                            <p><FaDollarSign /> {job.expected_salary}</p>
+                                            <p><FaCalendarAlt />  {new Date(job.date_added).toLocaleDateString()}</p>
+                                            <p><FaUser /> {job.added_by}</p>
                                         </div>
                                     </div>
                                 </div>
