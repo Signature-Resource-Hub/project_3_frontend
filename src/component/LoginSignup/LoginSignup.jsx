@@ -4,29 +4,25 @@ import { FaLock, FaPhoneAlt, FaUser } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
 import './LoginSignup.css'
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const LoginSignup = () => {
   const [input, setInput] = useState({
     name: "",
     email: "",
     phone: "",
-    password: "",
-    error: "",
-    success: false,
   });
-
-  const { name, email, phone, password, error, success } = input;
+  const navigate = useNavigate();
 
   const inputHandler = (name) => (event) => {
-    setInput({ ...input, error: false, [name]: event.target.value });
+    setInput({ ...input, [name]: event.target.value });
   };
 
   const readValues = (event) => {
     event.preventDefault();
-    setInput({ ...input, error: false });
 
-    // Check if all fields are filled
-    if (!name || !email || !phone || !password) {
+    const { name, email, phone } = input;
+    if (!name || !email || !phone) {
       alert("Please fill in all fields");
       return;
     }
@@ -43,152 +39,82 @@ const LoginSignup = () => {
       return;
     }
 
-    // Check if password has at least 8 characters
-    if (password.length < 8) {
-      alert("Password must be at least 8 characters long");
-      return;
-    }
+    const payload = { name, email, phone };
+    console.log('Request payload:', payload);
 
-    axios.post("http://localhost:8000/api/register", input)
-      .then((response) => {
-        console.log(response.data);
-        if (response.data.error) {
-          setInput({ ...input, error: response.data.error, success: false });
-        } else {
-          setInput({
-            name: "",
-            email: "",
-            phone: "",
-            password: "",
-            error: "",
-            success: true,
-          });
+    try {
+      // Store data locally instead of sending it to the backend
+      localStorage.setItem("userData", JSON.stringify(payload));
+      
+      // Mock the response data
+      const response = {
+        data: {
+          status: "approved",
+          userData: payload
         }
-      })
-      .catch((error) => {
-        setInput({ ...input, error: "Something went wrong. Please try again later.", success: false });
-        console.error('Error occurred:', error);
-      });
-  };
+      };
 
-  const successMessage = () => {
-    return (
-      <div className="rowLS">
-        <div className="col-md-6 offset-sm-3 text-left">
-          <div
-            className="alert alert-success"
-            style={{ display: success ? "" : "none" }}
-          >
-            New account was created successfully. Please{" "}
-            <Link to="/login">Login Here</Link>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const errorMessage = () => {
-    return (
-      <div className="rowLS">
-        <div className="col-md-6 offset-sm-3 text-left">
-          <div
-            className="alert alert-danger"
-            style={{ display: error ? "" : "none" }}
-          >
-            {error}
-          </div>
-        </div>
-      </div>
-    );
+      if (response.data.status === "approved") {
+        
+        navigate("/verify", { state: { userData: response.data.userData } });
+      } else {
+        alert(response.data.msg);
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+      console.error('Error occurred:', error);
+    }
   };
 
   return (
     <div>
-      <br />
       <div className="container d-flex justify-content-center">
         <div className="rowLS g-3">
-          <form action=''>
+          <form>
             <h1>SIGN-UP</h1>
             <div className="input-boxLS">
-                <input
-                  type="text"
-                  name="name"
-                  value={name}
-                  onChange={inputHandler("name")}
-                  placeholder="Username"
-                  className="form-control"
-                  autoComplete="name"
-                />
-                <FaUser className="iconLS" />
-              </div>
-
-              <div className="input-boxLS">
-                <input
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={inputHandler("email")}
-                  placeholder="email"
-                  className="form-control"
-                  autoComplete="email"
-                />
-                <IoIosMail className="iconLS" />
-              </div>
-              <div className="input-boxLS">
-                <input
-                  type="tel"
-                  name="phone"
-                  value={phone}
-                  onChange={inputHandler("phone")}
-                  placeholder="phone"
-                  className="form-control"
-                  autoComplete="phone"
-                />
-                <FaPhoneAlt className="iconLS" />
-              </div>
-
-              <div className="input-boxLS">
-                <input
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={inputHandler("password")}
-                  placeholder="password"
-                  className="form-control"
-                  autoComplete="password"
-                />
-                <FaLock className="iconLS" />
-              </div>
-
-              <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                <button
-                  className="btn btn-danger"
-                  onClick={(event) => readValues(event)}
-                >
-                  SIGN UP
-                </button>
-              </div>
-              <div className="register-link">
-                <p>
-                  Already have an account?<Link to="/">Login</Link>
-                </p>
-              </div>
+            <input
+                type="name"
+                value={input.name}
+                onChange={inputHandler("name")}
+                placeholder="User name"
+                className="form-control"
+              />
+              <FaUser className="iconLS" />
+            </div>
+            <div className="input-boxLS">
+              <input
+                type="email"
+                value={input.email}
+                onChange={inputHandler("email")}
+                placeholder="Email"
+                className="form-control"
+              />
+              <IoIosMail className="iconLS" />
+            </div>
+            <div className="input-boxLS">
+              <input
+                type="tel"
+                value={input.phone}
+                onChange={inputHandler("phone")}
+                placeholder="Phone"
+                className="form-control"
+              />
+              <FaPhoneAlt className="iconLS" />
+            </div>
+            <div className="col col-12">
+              <button className="btn btn-danger" onClick={readValues}>
+                SIGN UP
+              </button>
+            </div>
+            <div className="register-link">
+              <p>
+                Already have an account? <Link to="/">Login</Link>
+              </p>
+            </div>
           </form>
         </div>
       </div>
-
-    
-      {success && (
-      <div className="alert alert-success" role="alert">
-        New account was created successfully. Please <Link to="/">Login Here</Link>
-      </div>
-    )}
-
-    {error && (
-      <div className="alert alert-danger" role="alert">
-        {error}
-      </div>
-    )}
     </div>
   );
 };
